@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endless Jetfighter - 8-bit Space Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🚀 ENDLESS JETFIGHTER</h1>
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="label">РАХУНОК:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">РЕКОРД:</span>
+                    <span id="highScore">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">ЖИТТЯ:</span>
+                    <span id="lives">3</span>
+                </div>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="960" height="540"></canvas>
+        
+        <div class="game-controls">
+            <div class="control-group">
+                <h3>КЕРУВАННЯ:</h3>
+                <p>🎮 WASD / Стрілки - рух</p>
+                <p>🔫 Пробіл - стрільба</p>
+                <p>⏸️ P - пауза</p>
+            </div>
+            <button id="startBtn" class="game-btn">ПОЧАТИ ГРУ</button>
+            <button id="pauseBtn" class="game-btn" style="display: none;">ПАУЗА</button>
+        </div>
+        
+        <div id="gameOverScreen" class="game-over" style="display: none;">
+            <div class="game-over-content">
+                <h2>💥 GAME OVER</h2>
+                <p>Ваш рахунок: <span id="finalScore">0</span></p>
+                <p id="newRecord" style="display: none;">🏆 НОВИЙ РЕКОРД!</p>
+                <button id="restartBtn" class="game-btn">ГРАТИ ЗНОВУ</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
